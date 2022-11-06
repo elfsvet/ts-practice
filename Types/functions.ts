@@ -24,11 +24,36 @@ const addNums1 = (x: number, y: number) => {
 
 addNums(5, 10);
 
-function rando(num: number) { // union type |or one or another
+function rando(num: number) {
+  // union type |or one or another
   if (Math.random() < 0.5) {
     return num.toString();
   }
   return num;
 }
 
-rando(2)
+rando(2);
+
+const colors = ['red', 'orange', 'yellow'];
+colors.map((color) => {
+  return color.toUpperCase();
+});
+
+// void type dont return anything undefined
+
+function printTwice(msg: string): void {
+  console.log(msg);
+  console.log(msg);
+}
+
+// Never no value at all
+
+function makeError(msg: string): never {
+  throw new Error(msg);
+}
+
+function gameLoop(): never {
+  while (true) {
+    console.log('Loop');
+  }
+}
