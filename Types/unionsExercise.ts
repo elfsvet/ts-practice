@@ -12,6 +12,7 @@ highScore = false
 // it cannot be an array of numbers and strings (mixed together)
 const stuff21: number[] | string[] = [1,2,3];
 stuff21.push(3)
+//! stuff21.push('hello')
 // **********************************************
 // ******************* PART 3 *******************
 // **********************************************
