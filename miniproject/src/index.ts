@@ -1,2 +1,4 @@
-const btn = document.getElementById('btn')
+const btn = document.getElementById('btn');
 console.log(btn);
+
+console.log('hello'.replaceAll('l', '!'))
