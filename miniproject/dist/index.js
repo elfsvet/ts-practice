@@ -34,13 +34,21 @@ function handleSubmit(e) {
     };
     createTodo(newTodo);
     todos.push(newTodo);
-    localStorage.setItem('todos', JSON.stringify(todos));
+    saveTodos();
     input.value = '';
+}
+function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
 function createTodo(todo) {
     const newLI = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.checked = todo.completed;
+    checkbox.addEventListener('change', function () {
+        todo.completed = checkbox.checked;
+        saveTodos();
+    });
     newLI.append(todo.text);
     newLI.append(checkbox);
     list.append(newLI);
