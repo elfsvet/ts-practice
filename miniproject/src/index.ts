@@ -1,8 +1,2 @@
-function printDouble(msg: string){
-    console.log(msg);
-    console.log(msg);
-}
-
-printDouble(
-"hello world :)"
-)
+const btn = document.getElementById('btn')
+console.log(btn);

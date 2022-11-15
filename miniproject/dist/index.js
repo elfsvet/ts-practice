@@ -1,6 +1,3 @@
 "use strict";
-function printDouble(msg) {
-    console.log(msg);
-    console.log(msg);
-}
-printDouble("hello world :)");
+const btn = document.getElementById('btn');
+console.log(btn);
